@@ -26,6 +26,30 @@
 # list3 = sorted(list3)
 # print(list3)  
 
+# Альтернативное решение Олег
+
+
+# from random import randint 
+# n = int(input("Введите количество первого множества: "))
+# m = int(input("Введите количество второго множества: "))
+# list1 = [(randint(0, 10)) for i in range(n)]
+# list2 = [(randint(0, 10)) for i in range(m)]
+# list3 = []
+# # for i in range(n):
+# #     list2.append(randint(0, 10))  
+  
+    
+# # for i in range(m):
+# #     list2.append(randint(0, 10))
+# print(list1) 
+# print(list2)
+# new_nums = []
+# for i in list1:
+#     if i in list2 and not i in new_nums:
+#         new_nums.append(i) 
+
+# print(*sorted(new_nums))       
+
 
 # Задача 24: В фермерском хозяйстве в Карелии выращивают чернику. Она растёт на круглой грядке, причём кусты высажены только по окружности. 
 # Таким образом, у каждого куста есть ровно два соседних. Всего на грядке растёт N кустов.
@@ -58,3 +82,23 @@
 #         sum1 = sum2
 
 # print(sum1)
+
+# Олег
+
+
+# import random
+# n = int(input('Введите колличество кустов: '))
+
+# garden = [random.randint(1, 6) for i in range(n)]
+# print(*garden)
+
+# max_bushes  = garden[0] + garden[1] + garden[2]
+
+# for i in range (len(garden)):
+#     following_bushes = garden[1] + garden[2] + garden[3]
+#     if following_bushes > max_bushes:
+#         max_bushes = following_bushes 
+#     temp = garden.pop(0)
+#     garden.append(temp)
+
+# print(f"Максимальное число ягод за один заход = {max_bushes}")
